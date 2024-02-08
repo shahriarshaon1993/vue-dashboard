@@ -12,7 +12,7 @@ const routes = [
         component: DefaultLayout,
         meta: { requiresAuth: true },
         children: [
-            { path: '/dashboard', name: 'Dashboard', component: Dashboard }
+            { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: {title: 'Dashboard'} }
         ]
     },
     {
@@ -21,7 +21,7 @@ const routes = [
         component: AuthLayout,
         meta: { isGuest: true },
         children: [
-            { path: '/login', name: 'Login', component: Login },
+            { path: '/login', name: 'Login', component: Login, meta: {title: 'Login'} },
         ]
     }
 ];
@@ -36,6 +36,7 @@ const user = {
 };
 
 router.beforeEach((to, form, next) => {
+    document.title = to.meta?.title ?? 'Dashboard'
     if (to.meta.requiresAuth && !user.token) {
         next({ name: 'Login' });
     } else if (user.token && (to.meta.isGuest)) {
