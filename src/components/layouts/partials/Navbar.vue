@@ -1,6 +1,5 @@
 <script setup>
 // Imports
-import IconsBar from '@/components/icons/Bar.vue';
 import IconsMoon from '@/components/icons/Moon.vue';
 import IconsSun from '@/components/icons/Sun.vue';
 

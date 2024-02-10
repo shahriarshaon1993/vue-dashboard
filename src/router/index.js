@@ -4,6 +4,10 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
 import AuthLayout from "@/components/layouts/AuthLayout.vue";
 import Login from "@/pages/auth/Login.vue";
 import Dashboard from "@/pages/Dashboard.vue";
+import ElementAlerts from "@/pages/elements/Alerts.vue";
+import ElementButtons from "@/pages/elements/Buttons.vue";
+import ElementInputs from "@/pages/elements/Inputs.vue";
+import ElementPagination from "@/pages/elements/Paginations.vue";
 
 const routes = [
     {
@@ -12,7 +16,11 @@ const routes = [
         component: DefaultLayout,
         meta: { requiresAuth: true },
         children: [
-            { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: {title: 'Dashboard'} }
+            {path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: {title: 'Dashboard'}},
+            {path: '/elements/alerts', name: 'ElementAlerts', component: ElementAlerts, meta: {title: 'Element alerts'}},
+            {path: '/elements/buttons', name: 'ElementButtons', component: ElementButtons, meta: {title: 'Element buttons'}},
+            {path: '/elements/inputs', name: 'ElementInputs', component: ElementInputs, meta: {title: 'Element inputs'}},
+            {path: '/elements/pagination', name: 'ElementPagination', component: ElementPagination, meta: {title: 'Element pagination'}},
         ]
     },
     {
