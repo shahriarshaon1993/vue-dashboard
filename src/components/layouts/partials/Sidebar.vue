@@ -1,8 +1,11 @@
 <script setup>
 // Imports
 import IconsBarsBottom from '@/components/icons/BarsBottom.vue';
-
-import { HomeIcon, Squares2X2Icon } from '@heroicons/vue/24/solid';
+import NavLink from "@/components/NavLink.vue";
+import {
+  HomeIcon,
+  Squares2X2Icon
+} from '@heroicons/vue/24/solid';
 
 // Refs
 const navigation = [
@@ -43,26 +46,16 @@ const navigation = [
 
             <ul id="dropdown-example" class="hidden py-2 space-y-2">
               <li v-for="menu in item.menus" :key="menu.name">
-                <router-link
-                    :to="menu.to"
-                    active-class="bg-gray-100 dark:bg-gray-700"
-                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                >
-                  {{ menu.name }}
-                </router-link>
+                <NavLink :href="menu.to" class="pl-11">{{ menu.name }}</NavLink>
               </li>
             </ul>
           </template>
 
           <template v-else>
-            <router-link
-                :to="item.to"
-                active-class="bg-gray-100 dark:bg-gray-700"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-            >
+            <NavLink :href="item.to" >
               <component :is="item.icon" class="w-5 h-5" />
-              <span class="ms-3">{{ item.name }}</span>
-            </router-link>
+              <span class="ms-2">{{ item.name }}</span>
+            </NavLink>
           </template>
         </li>
       </ul>
