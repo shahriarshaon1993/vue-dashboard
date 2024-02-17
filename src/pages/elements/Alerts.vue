@@ -14,7 +14,7 @@ import AlertDark from "@/components/Alerts/AlertDark.vue";
 <template>
   <BreadcrumbItems>
     <BreadcrumbItem title="Dashboard" :href="{name: 'Dashboard'}" :home-icon="true"/>
-    <BreadcrumbItem title="Alerts" :href="{name: 'Dashboard'}" :active="true"/>
+    <BreadcrumbItem title="Alerts" :href="{name: 'ElementAlerts'}" :active="true"/>
   </BreadcrumbItems>
 
   <Card title="Default alert">
