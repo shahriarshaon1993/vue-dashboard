@@ -17,7 +17,7 @@ const hasError = computed(() => {
 
 <template>
   <label
-      class="block mb-2 text-sm font-medium"
+      class="block text-sm font-medium"
       :class="[hasError ? 'text-red-700 dark:text-red-500' : 'text-gray-900 dark:text-white']"
   >
     <span v-if="value">{{ value }}</span>

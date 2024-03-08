@@ -9,6 +9,7 @@ import ElementButtons from "@/pages/elements/Buttons.vue";
 import ElementInputs from "@/pages/elements/Inputs.vue";
 import ElementPagination from "@/pages/elements/Paginations.vue";
 import Tables from "@/pages/Tables.vue";
+import Form from "@/pages/Form.vue";
 
 const routes = [
     {
@@ -23,6 +24,7 @@ const routes = [
             {path: '/elements/inputs', name: 'ElementInputs', component: ElementInputs, meta: {title: 'Element inputs'}},
             {path: '/elements/pagination', name: 'ElementPagination', component: ElementPagination, meta: {title: 'Element pagination'}},
             {path: '/tables', name: 'Table', component: Tables, meta: {title: 'Tables'}},
+            {path: '/forms', name: 'Form', component: Form, meta: {title: 'Forms'}},
         ]
     },
     {

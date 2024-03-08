@@ -1,7 +1,8 @@
 <script setup>
 // Imports
+import IconsArrowTopRightOnSquare from '@/components/icons/ArrowTopRightOnSquare.vue';
 import IconsBarsBottom from '@/components/icons/BarsBottom.vue';
-import TableCells from '@/components/icons/TableCells.vue';
+import IconsTableCells from '@/components/icons/TableCells.vue';
 import NavLink from "@/components/NavLink.vue";
 import {
   HomeIcon,
@@ -17,7 +18,8 @@ const navigation = [
       { name: 'Inputs', icon: null , to: {name: 'ElementInputs' }},
       { name: 'Pagination', icon: null , to: {name: 'ElementPagination' }},
   ]},
-  { name: 'Tables', icon: TableCells , to: {name: 'Table' }},
+  { name: 'Tables', icon: IconsTableCells , to: {name: 'Table' }},
+  { name: 'Forms', icon: IconsArrowTopRightOnSquare , to: {name: 'Form' }},
 ];
 </script>
 
