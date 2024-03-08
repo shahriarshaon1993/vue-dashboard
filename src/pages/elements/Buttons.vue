@@ -22,7 +22,7 @@ import AlternativeLoaderButton from "@/components/Buttons/AlternativeLoaderButto
     <BreadcrumbItem title="Buttons" :href="{name: 'ElementButtons'}" :active="true"/>
   </BreadcrumbItems>
 
-  <Card title="Button Default" class="space-x-2">
+  <Card title="Button Default">
     <DefaultButton>Default</DefaultButton>
     <AlternativeButton>Alternative</AlternativeButton>
     <DarkButton>Dark</DarkButton>
