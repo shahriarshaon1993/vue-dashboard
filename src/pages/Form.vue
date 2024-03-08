@@ -8,6 +8,7 @@ import { ref } from "vue";
 import Checkbox from "@/components/Inputs/Checkbox.vue";
 import DefaultButton from "@/components/Buttons/DefaultButton.vue";
 import LightButton from "@/components/Buttons/LightButton.vue";
+import OrangeButton from "@/components/Buttons/OrangeButton.vue";
 
 const form = ref({
   zip: '',
@@ -85,7 +86,7 @@ const onSelect = (event) => {
             <div class="sm:col-span-3">
               <InputLabel for="country_id" value="Countries" />
               <div class="mt-2">
-                <select id="country_id" v-model="form.country_id" class="sm:max-w-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <select id="country_id" v-model="form.country_id" class="sm:max-w-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-300 focus:border-orange-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-300 dark:focus:border-orange-300">
                   <option selected>Choose a country</option>
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
@@ -165,7 +166,7 @@ const onSelect = (event) => {
 
       <div class="mt-6 flex items-center justify-end gap-x-2">
         <LightButton type="button">Cancel</LightButton>
-        <DefaultButton type="button">Save</DefaultButton>
+        <OrangeButton type="button">Save</OrangeButton>
       </div>
     </form>
   </Card>

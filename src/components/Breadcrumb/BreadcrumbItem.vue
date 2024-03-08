@@ -32,7 +32,7 @@ const props = defineProps({
   </li>
   <li v-else class="inline-flex items-center">
     <RouterLink :to="href"
-       class="inline-flex items-center text-base font-medium text-gray-700 hover:text-orange-700 dark:text-gray-400 dark:hover:text-white">
+       class="inline-flex items-center text-base font-medium text-gray-700 hover:text-orange-700 dark:text-gray-400 dark:hover:hover:text-orange-300">
       <IconsHome v-if="homeIcon" class="w-3 h-3 me-2.5" />
       <IconsChevronRight v-else class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" />
       {{ title }}

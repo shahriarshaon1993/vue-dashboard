@@ -14,6 +14,8 @@ import PurpleButton from "@/components/Buttons/PurpleButton.vue";
 import DefaultLoaderButton from "@/components/Buttons/DefaultLoaderButton.vue";
 import IconsLoader from "@/components/icons/Loader.vue";
 import AlternativeLoaderButton from "@/components/Buttons/AlternativeLoaderButton.vue";
+import OrangeButton from "@/components/Buttons/OrangeButton.vue";
+import OrangeLoaderButton from "@/components/Buttons/OrangeLoaderButton.vue";
 </script>
 
 <template>
@@ -31,6 +33,7 @@ import AlternativeLoaderButton from "@/components/Buttons/AlternativeLoaderButto
     <RedButton>Red</RedButton>
     <YellowButton>Yellow</YellowButton>
     <PurpleButton>Purple</PurpleButton>
+    <OrangeButton>Orange</OrangeButton>
   </Card>
 
   <Card title="Button Loader">
@@ -43,5 +46,10 @@ import AlternativeLoaderButton from "@/components/Buttons/AlternativeLoaderButto
       <IconsLoader class="w-4 h-4 me-3 text-white" />
       Loading...
     </AlternativeLoaderButton>
+
+    <OrangeLoaderButton>
+      <IconsLoader class="w-4 h-4 me-3 text-white" />
+      Loading...
+    </OrangeLoaderButton>
   </Card>
 </template>
