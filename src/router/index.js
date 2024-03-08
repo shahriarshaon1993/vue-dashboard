@@ -8,6 +8,7 @@ import ElementAlerts from "@/pages/elements/Alerts.vue";
 import ElementButtons from "@/pages/elements/Buttons.vue";
 import ElementInputs from "@/pages/elements/Inputs.vue";
 import ElementPagination from "@/pages/elements/Paginations.vue";
+import Tables from "@/pages/Tables.vue";
 
 const routes = [
     {
@@ -21,6 +22,7 @@ const routes = [
             {path: '/elements/buttons', name: 'ElementButtons', component: ElementButtons, meta: {title: 'Element buttons'}},
             {path: '/elements/inputs', name: 'ElementInputs', component: ElementInputs, meta: {title: 'Element inputs'}},
             {path: '/elements/pagination', name: 'ElementPagination', component: ElementPagination, meta: {title: 'Element pagination'}},
+            {path: '/tables', name: 'Table', component: Tables, meta: {title: 'Tables'}},
         ]
     },
     {
