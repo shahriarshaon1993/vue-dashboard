@@ -42,7 +42,7 @@ const form = ref({
         <div class="flex items-start">
           <div class="flex items-start">
             <div class="flex items-center h-5 mr-2">
-              <Checkbox id="remember" v-model="form.remember_me" checked="form.remember_me" />
+              <Checkbox id="remember" v-model="form.remember_me" :checked="form.remember_me" />
             </div>
             <InputLabel for="remember" value="Remember me" />
           </div>
