@@ -2,6 +2,7 @@
 // Imports
 import IconsArrowTopRightOnSquare from '@/components/icons/ArrowTopRightOnSquare.vue';
 import IconsBarsBottom from '@/components/icons/BarsBottom.vue';
+import IconsCard from '@/components/icons/Card.vue';
 import IconsTableCells from '@/components/icons/TableCells.vue';
 import NavLink from "@/components/NavLink.vue";
 import {
@@ -20,6 +21,7 @@ const navigation = [
   ]},
   { name: 'Tables', icon: IconsTableCells , to: {name: 'Table' }},
   { name: 'Forms', icon: IconsArrowTopRightOnSquare , to: {name: 'Form' }},
+  { name: 'Cards', icon: IconsCard , to: {name: 'Card' }},
 ];
 </script>
 

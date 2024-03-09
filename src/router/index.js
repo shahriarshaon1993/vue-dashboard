@@ -10,6 +10,7 @@ import ElementInputs from "@/pages/elements/Inputs.vue";
 import ElementPagination from "@/pages/elements/Paginations.vue";
 import Tables from "@/pages/Tables.vue";
 import Form from "@/pages/Form.vue";
+import Card from "@/pages/Cards.vue";
 
 const routes = [
     {
@@ -25,6 +26,7 @@ const routes = [
             {path: '/elements/pagination', name: 'ElementPagination', component: ElementPagination, meta: {title: 'Element pagination'}},
             {path: '/tables', name: 'Table', component: Tables, meta: {title: 'Tables'}},
             {path: '/forms', name: 'Form', component: Form, meta: {title: 'Forms'}},
+            {path: '/cards', name: 'Card', component: Card, meta: {title: 'Cards'}},
         ]
     },
     {
