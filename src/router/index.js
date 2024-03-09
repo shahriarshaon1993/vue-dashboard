@@ -11,6 +11,7 @@ import ElementPagination from "@/pages/elements/Paginations.vue";
 import Tables from "@/pages/Tables.vue";
 import Form from "@/pages/Form.vue";
 import Card from "@/pages/Cards.vue";
+import Modal from "@/pages/Modals.vue";
 
 const routes = [
     {
@@ -27,6 +28,7 @@ const routes = [
             {path: '/tables', name: 'Table', component: Tables, meta: {title: 'Tables'}},
             {path: '/forms', name: 'Form', component: Form, meta: {title: 'Forms'}},
             {path: '/cards', name: 'Card', component: Card, meta: {title: 'Cards'}},
+            {path: '/modals', name: 'Modal', component: Modal, meta: {title: 'Modals'}},
         ]
     },
     {

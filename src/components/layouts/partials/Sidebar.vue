@@ -2,6 +2,7 @@
 // Imports
 import IconsArrowTopRightOnSquare from '@/components/icons/ArrowTopRightOnSquare.vue';
 import IconsBarsBottom from '@/components/icons/BarsBottom.vue';
+import IconsSquare2Stack from '@/components/icons/Square2Stack.vue';
 import IconsCard from '@/components/icons/Card.vue';
 import IconsTableCells from '@/components/icons/TableCells.vue';
 import NavLink from "@/components/NavLink.vue";
@@ -22,6 +23,7 @@ const navigation = [
   { name: 'Tables', icon: IconsTableCells , to: {name: 'Table' }},
   { name: 'Forms', icon: IconsArrowTopRightOnSquare , to: {name: 'Form' }},
   { name: 'Cards', icon: IconsCard , to: {name: 'Card' }},
+  { name: 'Modal', icon: IconsSquare2Stack , to: {name: 'Modal' }},
 ];
 </script>
 
@@ -42,7 +44,7 @@ const navigation = [
       <ul class="space-y-2 font-medium">
         <li v-for="item in navigation" :key="item.name">
           <template v-if="item.menus">
-            <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-orange-300 dark:text-white dark:hover:bg-orange-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <component :is="item.icon" class="w-5 h-5" />
               <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{ item.name }}</span>
               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
