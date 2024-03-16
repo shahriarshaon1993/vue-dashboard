@@ -1,14 +1,19 @@
 # vue-dashboard
+Welcome to vue dashboard – the ultimate solution for crafting stunning admin dashboards, available to all developers completely free of charge. With the powerful combination of Vue.js 3 and Tailwind CSS, vue dashboard empowers you to create sleek and efficient admin interfaces without any cost barriers. Whether you're a seasoned developer or just getting started, VueDash offers the tools and resources you need to bring your vision to life.
 
-This template should help get you started developing with Vue 3 in Vite.
+## Using Technologies
+ - Html3
+ - Css3
+ - Vuejs 3
+ - Tailwind Css
+ - Flowbite
+ - Apexcharts
 
-## Recommended IDE Setup
+## Clone Repositories
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```sh
+git clone https://github.com/shahriarshaon1993/vue-dashboard.git
+```
 
 ## Project Setup
 
@@ -20,10 +25,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```

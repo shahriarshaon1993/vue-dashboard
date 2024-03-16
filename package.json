@@ -1,6 +1,6 @@
 {
   "name": "vue-dashboard",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,6 +8,15 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "free",
+    "dashboard",
+    "vuejs",
+    "vuejs 3",
+    "Tailwind Css",
+    "Flobite"
+  ],
+  "author": "Shahriar Shaon <shahriarshaon1993@gmail.com> (https://github.com/shahriarshaon1993)",
   "dependencies": {
     "@heroicons/vue": "^2.1.1",
     "@vueuse/core": "^10.7.2",
@@ -22,5 +31,6 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.10"
-  }
+  },
+  "license": "ISC"
 }
