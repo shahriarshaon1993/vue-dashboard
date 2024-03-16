@@ -6,10 +6,21 @@ import IconsCurrencyDollar from "@/components/icons/CurrencyDollar.vue";
 import IconsShoppingBag from "@/components/icons/ShoppingBag.vue";
 import IconsUserCircle from "@/components/icons/UserCircle.vue";
 import IconsWallet from "@/components/icons/Wallet.vue";
-import Card from "@/components/Card.vue";
+import Table from "@/components/Table/Table.vue";
+import TableHeadCell from "@/components/Table/TableHeadCell.vue";
+import TableRow from "@/components/Table/TableRow.vue";
+import TableDataCell from "@/components/Table/TableDataCell.vue";
+import PencilSquare from "@/components/icons/PencilSquare.vue";
 
+// Charts
 const barOptions = {
   chart: {},
+  legend: {
+    fontSize: '15px',
+    labels: {
+      useSeriesColors: true
+    },
+  },
   plotOptions: {
     bar: {
       horizontal: false,
@@ -27,6 +38,13 @@ const barOptions = {
   },
   xaxis: {
     categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    labels: {
+      style: {
+        colors: [],
+        fontSize: '14px',
+        cssClass: 'hello-world'
+      },
+    }
   },
   yaxis: {
     title: {
@@ -77,6 +95,50 @@ const pieOptions = {
     }
   }]
 };
+
+// Table users
+const users = [
+  {
+    id: 1201,
+    name: 'Neil Sims',
+    email: 'neil.sims@example.com',
+    position: 'React Developer',
+    image: 'https://flowbite.com/docs/images/people/profile-picture-1.jpg',
+    status: true
+  },
+  {
+    id: 1202,
+    name: 'Bonnie Green',
+    email: 'bonnie@example.com',
+    position: 'Designer',
+    image: 'https://flowbite.com/docs/images/people/profile-picture-2.jpg',
+    status: false
+  },
+  {
+    id: 1203,
+    name: 'Jese Leos',
+    email: 'jese@example.com',
+    position: 'Vue JS Developer',
+    image: 'https://flowbite.com/docs/images/people/profile-picture-3.jpg',
+    status: true
+  },
+  {
+    id: 1204,
+    name: 'Thomas Lean',
+    email: 'thomes@example.com',
+    position: 'UI/UX Engineer',
+    image: 'https://flowbite.com/docs/images/people/profile-picture-4.jpg',
+    status: true
+  },
+  {
+    id: 1205,
+    name: 'Leslie Livingston',
+    email: 'leslie@flowbite.com',
+    position: 'SEO Specialist',
+    image: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg',
+    status: false
+  }
+];
 </script>
 
 <template>
@@ -103,7 +165,7 @@ const pieOptions = {
                 $<span>559.25</span>k
               </h4>
 
-              <a href="#" class="text-orange-300 underline text-sm">View net earnings</a>
+              <router-link to="#" class="text-orange-300 underline text-sm">View net earnings</router-link>
             </div>
             <div class="flex items-center justify-center h-12 w-12 flex-shrink-0 bg-stone-300 text-white rounded">
                 <IconsCurrencyDollar class="w-6 h-6 text-stone-600" />
@@ -129,7 +191,7 @@ const pieOptions = {
                 36,894
               </h4>
 
-              <a href="#" class="text-orange-300 underline text-sm">View all orders</a>
+              <router-link to="#" class="text-orange-300 underline text-sm">View all orders</router-link>
             </div>
             <div class="flex items-center justify-center h-12 w-12 flex-shrink-0 bg-blue-300 text-white rounded">
               <IconsShoppingBag class="w-6 h-6 text-blue-600" />
@@ -155,7 +217,7 @@ const pieOptions = {
                 <span>183.35</span>M
               </h4>
 
-              <a href="#" class="text-orange-300 underline text-sm">See details</a>
+              <router-link to="#" class="text-orange-300 underline text-sm">See details</router-link>
             </div>
             <div class="flex items-center justify-center h-12 w-12 flex-shrink-0 bg-orange-300 text-white rounded">
               <IconsUserCircle class="w-6 h-6 text-orange-600" />
@@ -181,7 +243,7 @@ const pieOptions = {
                 $<span>165.89</span>k
               </h4>
 
-              <a href="#" class="text-orange-300 underline text-sm">Withdraw money</a>
+              <router-link to="#" class="text-orange-300 underline text-sm">Withdraw money</router-link>
             </div>
             <div class="flex items-center justify-center h-12 w-12 flex-shrink-0 bg-slate-300 text-white rounded">
               <IconsWallet class="w-6 h-6 text-slate-600" />
@@ -198,6 +260,47 @@ const pieOptions = {
       <div class="flex items-center justify-center rounded bg-gray-50 dark:bg-gray-800 p-4">
         <apexchart type="pie" width="400" :options="pieOptions" :series="pieSeries"></apexchart>
       </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 mb-4">
+      <Table>
+        <template #header>
+          <TableRow>
+            <TableHeadCell>name</TableHeadCell>
+            <TableHeadCell>position</TableHeadCell>
+            <TableHeadCell>status</TableHeadCell>
+            <TableHeadCell>Action</TableHeadCell>
+          </TableRow>
+        </template>
+
+        <template #default>
+          <TableRow
+              v-for="(user, index) in users" :key="user.id"
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <TableHeadCell class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+              <img class="w-10 h-10 rounded-full" :src="user.image" :alt="user.name">
+              <div class="ps-3">
+                <div class="text-base font-semibold">{{ user.name }}</div>
+                <div class="font-normal text-gray-500">{{ user.email }}</div>
+              </div>
+            </TableHeadCell>
+            <TableDataCell>{{ user.position }}</TableDataCell>
+            <TableDataCell>
+              <div class="flex items-center">
+                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                <template v-if="user.status">Online</template>
+                <template v-else>Offline</template>
+              </div>
+            </TableDataCell>
+            <TableDataCell>
+              <router-link to="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                <PencilSquare class="w-6 h-6" />
+              </router-link>
+            </TableDataCell>
+          </TableRow>
+        </template>
+      </Table>
     </div>
   </div>
 </template>
