@@ -26,3 +26,6 @@ npm install
 ```sh
 npm run dev
 ```
+
+### Email Address
+> shahriarshaon1993@gmail.com
