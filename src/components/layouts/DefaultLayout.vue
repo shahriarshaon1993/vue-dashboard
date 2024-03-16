@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
   <Sidebar/>
 
-  <div class="p-4 sm:ml-64">
+  <div class="p-4 sm:ml-64 selection:bg-orange-300 selection:text-gray-900">
     <Navbar/>
     <div class="p-4 mt-2">
       <router-view></router-view>
